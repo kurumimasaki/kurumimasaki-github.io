@@ -1,0 +1,449 @@
+    @charset "utf-8";
+    /* 全ページにかけるCSS */
+    
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+     header,h2{
+        font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+     }
+     
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    /* html {
+        background-color: #dc143c;
+    } */
+    
+    body {
+        background-color: #ffffff;
+    }
+    
+    a:hover {
+        opacity: 0.6;
+    }
+
+    h2 {
+        font-size: 36px;
+        color: black;
+        text-align: center;
+        height: 70px;
+    }
+        
+    /*共通ヘッダー */
+    
+    header {
+        background-color: rgb(241, 213, 86);
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+    }
+    
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 16px;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    header li {
+        font-size: 24px;
+        color: #000f;
+        list-style-type: none;
+        
+    }
+    
+    header li:last-child {
+        margin-right: 0px;
+    }
+    /* トップ-メインビジュアル */
+    
+    .main_visual {
+        margin-bottom: 32px;
+        padding-top: 40px;
+    }
+    
+    .main_visual div {
+        height: 100vh;
+        max-height: 600px;
+        background-image: url(../images/top_img.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #ffffff;
+
+    }
+    .main_visual div img {
+        width: 60%;
+    }
+
+    /* プロフィール */
+
+    
+
+    .profile-block {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+   
+    .profile-image {
+        width: 25%;
+    }
+
+    .profile-image img {
+    width: 100%;
+    }
+
+    .profile-text {
+        font-family: sans-serif;
+        width: 70%;
+    }
+
+    .profile-text p {
+        margin-bottom: 30px;
+    }
+
+    .profile-text li {
+        border-spacing: 16px 8px;
+        list-style-type: none;
+        margin-bottom: 10px;
+
+    }
+    .wrapper{
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto 50px auto;
+    }
+
+    /* スキルページ */
+
+    .skill-icon ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .skill-icon li {
+        list-style-type: none;
+        padding-bottom: 50px;
+        width: calc(100%/3);
+        height: 280px;
+        text-align: center;
+        padding: 0 10px 50px;
+}
+    /* .skill-icon ul li {
+        height: 60px;
+    } */
+    
+    .skill-icon {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 10px 0 10px;
+       
+    }
+    
+    .icon{
+        width: 40%;
+    }
+
+    .icon-text {
+        font-weight: bold;
+    }
+    
+    /* バナーページ */
+    
+    .back-ground {background-color: #f6f7c4;
+                    width: 100%;
+                    padding-top: 35px;
+                }
+
+    .banner-wrapper {
+        width: 100%;
+        padding-top: 48px;
+    }
+
+    .banner-wrapper {
+        margin: 80px 0 40px 0;
+    }
+    
+    .banner {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 10px 0 10px;
+    }
+
+    /* .banner-logo {
+        font-size: 36px;
+        color: black;
+        text-align: center;
+        height: 70px;
+    } */
+
+    .banner ul {
+        display: grid;
+        gap: 60px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+    .banner img {
+        width: 100%;
+    }
+
+    /* .banner ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    } */
+
+    .banner li {
+        list-style-type: none;
+    }
+
+/* ウェブデザインページ */
+
+    .webbox ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    .webbox ul li {
+       width: 47%; 
+       list-style-type: none;
+    }
+
+    .webbox ul li img {
+        width: 100%; 
+     }
+
+ /* 共通フッター */
+    
+    footer {
+        font-size: 12px;
+        height: 32px;
+        background-color: rgb(229 204 90);
+        color: #000;
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    /*ナビメニューのスタイルを指定*/
+    nav.NavMenu {
+        position: fixed;
+        /*表示位置を固定*/
+        z-index: 2;
+        /*重ね順を変更*/
+        top: 0;
+        /*表示位置を指定*/
+        left: 0;
+        /*表示位置を指定*/
+        background: #fff;
+        /*背景を白にする*/
+        color: #000;
+        /*文字色を黒にする*/
+        text-align: center;
+        /*テキストを中央揃え*/
+        width: 100%;
+        /*全幅表示*/
+        transform: translateX(100%);
+        /*ナビを右に隠す*/
+        transition: all 0.6s;
+        /*アニメーションの時間を指定*/
+    }
+
+    nav.NavMenu ul {
+        display: flex;
+        flex-direction: column;
+        background: #eb0f3b;
+        /*背景をグレーにする*/
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    nav.NavMenu ul li {
+        font-size: 1.1em;
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav.NavMenu ul li:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+        /*最後のメニュー項目のみ下線を消す*/
+    }
+
+    nav.NavMenu ul li a {
+        display: block;
+        /*クリックできる領域を広げる*/
+        color: #000;
+        padding: 1em 0;
+    }
+    /*トグルボタンが押されたときに付与するクラス*/
+
+    nav.NavMenu.active {
+        transform: translateY(0%);
+    }
+    /*トグルボタンのスタイルを指定*/
+
+    .Toggle {
+        display: none;
+        position: fixed;
+        /* bodyに対しての絶対位置指定 */
+        right: 10px;
+        top: 5px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .Toggle span {
+        display: block;
+        position: absolute;
+        width: 30px;
+        border-bottom: solid 3px #000;
+        -webkit-transition: .35s ease-in-out;
+        /*変化の速度を指定*/
+        -moz-transition: .35s ease-in-out;
+        /*変化の速度を指定*/
+        transition: .35s ease-in-out;
+        /*変化の速度を指定*/
+        left: 6px;
+    }
+
+    .Toggle span:nth-child(1) {
+        top: 9px;
+    }
+
+    .Toggle span:nth-child(2) {
+        top: 18px;
+    }
+
+    .Toggle span:nth-child(3) {
+        top: 27px;
+    }
+    /* 最初のspanをマイナス45度に */
+
+    .Toggle.active span:nth-child(1) {
+        top: 18px;
+        left: 6px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    /* 2番目と3番目のspanを45度に */
+
+    .Toggle.active span:nth-child(2),
+    .Toggle.active span:nth-child(3) {
+        top: 18px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    /* メニューを開いたままウインドウを広げた場合のボタン固定 */
+
+    .Toggle.active {
+        display: block;
+    }
+/* ここからメディアクエリー */
+
+@media (max-width: 768px) {
+
+    header ul {
+        width: 70%;
+    }
+
+    .profile-block{
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    }
+}
+
+@media (max-width: 428px) {
+
+    .NavMenu-PC {
+        display: none;
+    }
+
+    .Toggle  {
+        display: block;
+    }
+
+    .main_visual div {
+        width: 100%;
+        height: 400px;
+    }
+
+    .main_visual div img {
+        width: 85%;
+        }
+
+    .wrapper {
+        width: 100%;
+        padding: 0 10px 0 10px;
+    }
+
+    .profile-image {
+        width: 60%;
+        margin: 0 auto 20px auto;
+    }
+
+    .profile-text {
+        width: 100%;
+        margin-bottom: 35px;    
+    }
+
+
+        .skill-icon li {
+        width: 46%;
+        height: 370px;
+    }
+    
+    .icon-text {
+        font-size: 24px;
+    }
+    .webbox ul{
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 10px 0 10px;
+    }
+
+    .webbox ul li {
+        width: auto;
+        height: auto;
+        width: 100%;
+    }
+    
+    .skill-icon li img {
+        width: 100%;
+    }
+    
+}
